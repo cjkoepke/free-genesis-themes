@@ -79,7 +79,7 @@ function sp_footer_creds_text() {
 	echo '<div class="creds"><p>';
 	echo 'Copyright &copy; ';
 	echo date('Y');
-	echo ' &middot; <a href="http://clvnk.com/product/scholar-theme" title="Scholar Theme" target="_blank">Scholar Theme</a> &middot; Crafted by <a href="http://clvnk.com">CLVNK Themes</a> &middot; Built on the <a href="http://www.shareasale.com/r.cfm?b=460184&u=884099&m=28169&urllink=&afftrack=" title="Genesis Framework">Genesis Framework</a>';
+	echo ' &middot; Crafted by <a href="http://twitter.com/calvinkoepke">Calvin Koepke</a> &middot; Built on the <a href="http://www.shareasale.com/r.cfm?b=460184&u=884099&m=28169&urllink=&afftrack=" title="Genesis Framework">Genesis Framework</a>';
 	echo '</p></div>';
 }
 
