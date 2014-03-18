@@ -14,3 +14,5 @@ Also, it's nice to <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&
 Questions? <a href="http://twitter.com/calvinkoepke">Ask on Twitter.</a>
 
 Enjoy!
+
+p.s. If you'd like to know why I'm giving these away for free, <a href="http://calvinkoepke.com/free-themes/" target="_blank">I've written a nice little post about it here</a>.
