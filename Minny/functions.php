@@ -86,17 +86,13 @@ function social_networks() {
 }
 
 //* Add support for post formats
-// add_theme_support( 'post-formats', array(
-// 	'aside',
-// 	'audio',
-// 	'chat',
-// 	'gallery',
-// 	'image',
-// 	'link',
-// 	'quote',
-// 	'status',
-// 	'video'
-// ) );
+add_theme_support( 'post-formats', array(
+	'image',
+	'link',
+	'quote'
+) );
+
+add_theme_support( 'genesis-post-format-images' );
 
 add_theme_support( 'genesis-structural-wraps', array(
 	'header',
