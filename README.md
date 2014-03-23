@@ -16,3 +16,6 @@ Questions? <a href="http://twitter.com/calvinkoepke">Ask on Twitter.</a>
 Enjoy!
 
 p.s. If you'd like to know why I'm giving these away for free, <a href="http://calvinkoepke.com/free-themes/" target="_blank">I've written a nice little post about it here</a>.
+
+## Requirements
+All themes require the Genesis Framework which can be purchased at <a href="http://calvinkoepke.com/go/gensis-framework" target="_blank">StudioPress</a>.
