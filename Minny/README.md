@@ -4,6 +4,6 @@ Minny
 Easily install using the Minny.zip file. <a href="http://demo.calvinkoepke.com/minny/" target="_blank">DEMO THEME</a>.
 
 ## Genesis Settings
-Make sure that you do not set Genesis to display the featured image in the loop. That's already integrated into the theme if a post has a featured image set. 
+Default settings for the demo come as is, except for the featured image, which is set. The post display is also set to "excerpt".
 
 Enjoy!
