@@ -96,9 +96,6 @@ add_filter('excerpt_more', 'new_excerpt_more');
 function minny_styles() {
 	// Enqueue Google Fonts (Better performance when executing as a stylesheet, instead of @import)
 	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic' );
-
-	// Add Custom Scripts
-	// wp_enqueue_script( 'minnyScripts', get_stylesheet_directory_uri() . '/js/minnyScripts.js', array('jquery'));
 }
 add_action( 'wp_enqueue_scripts', 'minny_styles', 99);
 
@@ -193,7 +190,8 @@ function minny_author_box() {
 }
 
 remove_action( 'genesis_after_entry', 'genesis_do_author_box_single', 8 );
-add_action( 'genesis_before_entry_content', 'genesis_do_author_box_single', 8 );
+add_action( 'genesis_entry_content', 'genesis_do_author_box_single', 8 );
+
 
 //* Customize the credits
 add_filter( 'genesis_footer_creds_text', 'sp_footer_creds_text' );

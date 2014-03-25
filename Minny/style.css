@@ -855,6 +855,12 @@ a.read-more {
 	text-decoration: none;
 }
 
+.format-image .author-box,
+.format-link .author-box,
+.format-quote .author-box {
+	display: none;
+}
+
 /* Comments
 --------------------------------------------- */
 
@@ -1076,6 +1082,11 @@ Jetpack Sharing
 	padding: 20px 0;
 	padding: 2rem 0;
 }
+
+div.sharedaddy .sd-content {
+	width: 100% !important;
+}
+
 .entry-content h3.sd-title { 
 	font-family: Baskerville, Georgia, serif;
 	font-size: 1.1em;
@@ -1096,21 +1107,33 @@ Jetpack Sharing
 }
  
 .content div.sharedaddy a.sd-button {
-	padding: 0 10px;
-	padding: 0 1rem;
+	background: #111;
 	box-shadow: none;
 }
  
-.content .sd-social-icon-text a.sd-button > span, a.sd-button > span {
+.content .sd-social-icon-text a.sd-button > span, 
+a.sd-button > span {
+	background: #111;
+	color: #eee;
 	opacity: 1;
-	padding: 6px 12px;
+	padding: 2px 12px;
+	-webkit-transition: all 0.1s ease-in-out;
+	-moz-transition:    all 0.1s ease-in-out;
+	-ms-transition:     all 0.1s ease-in-out;
+	-o-transition:      all 0.1s ease-in-out;
+	transition:         all 0.1s ease-in-out;
+}
+
+.content .sd-social-icon-text a.sd-button > span:hover, 
+a.sd-button > span:hover {
+	background: #976843;
 }
  
 .content a.sd-button > span {
 	background-image: none !important;
-	background: #fff;
+	background: #111;
 	border: none;
-	color: #000;
+	color: #eee;
 	font-size: 12px;
 	font-weight: 400;
 	letter-spacing: 1px;
@@ -1118,12 +1141,27 @@ Jetpack Sharing
 }
  
 .content a.sd-button:hover > span {
-	color: #976843;
+	color: #eee;
 }
  
 .sd-content .sd-button span.share-count {
-	color: #976843 !important;
+	background: #111;
+	color: #fff !important;
 	font-size: 100% !important;
+	-webkit-transition: all 0.1s ease-in-out;
+	-moz-transition:    all 0.1s ease-in-out;
+	-ms-transition:     all 0.1s ease-in-out;
+	-o-transition:      all 0.1s ease-in-out;
+	transition:         all 0.1s ease-in-out;
+}
+
+.sd-content .sd-button:hover span.share-count {
+	background: #976843;
+	margin-left: 5px;
+}
+
+div.sharedaddy a.sd-button:hover {
+	background: #976843 !important;
 }
 
 /*
