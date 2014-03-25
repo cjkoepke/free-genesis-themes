@@ -620,6 +620,12 @@ Content
 	text-align: justify;
 }
 
+@media (max-width: 800px) {
+	.entry-content {
+		text-align: left;
+	}
+}
+
 .entry, 
 .comment-respond {
 	width: 100%;
@@ -778,6 +784,63 @@ a.read-more {
 	margin: 0 auto 10px;
 	margin: 0 auto 1rem;
 	border-bottom: 1px solid #ccc;
+}
+
+/* Author Box
+--------------------------------------------- */
+
+.author-box {
+	float: right;
+	width: 240px;
+	margin: 0 0 20px 30px;
+	padding-left: 30px;
+	border-left: 2px solid #000;
+}
+
+@media (max-width: 800px) {
+	.author-box {
+		width: 40%;
+		max-width: 240px;
+		min-width: 100px;
+	}
+}
+
+.author-box-title {
+	line-height: 1.2;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-family: Baskerville, Georgia, serif;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #eee;
+	max-width: 90px;
+}
+
+.author-box-title span.sub-author-box-title {
+	display: block;
+	font-size: 12px;
+	text-transform: none;
+	font-style: italic;
+}
+
+.author-box .avatar {
+	float: right;
+	margin-left: 10px;
+	width: 100px;
+	border-radius: 50%;
+}
+
+.author-box-content {
+	font-size: 13px;
+}
+
+.author-box-content p {
+	margin-bottom: 0;
+}
+
+.author-box-content a {
+	color: #976843;
+	text-decoration: none;
 }
 
 /* Comments

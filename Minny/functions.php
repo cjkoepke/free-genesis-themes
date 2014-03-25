@@ -163,7 +163,37 @@ add_theme_support( 'genesis-structural-wraps', array(
 ) );
 
 // //* Remove the author box on single posts HTML5 Themes
+add_filter( 'get_the_author_genesis_author_box_single', '__return_true' );
+
+add_filter( 'genesis_author_box', 'minny_author_box' );
+function minny_author_box() {
+ 
+	// Author's Gravatar image
+	$gravatar_size = apply_filters( 'genesis_author_box_gravatar_size', 100 );
+	$gravatar      = get_avatar( get_the_author_meta( 'email' ), $gravatar_size );
+ 
+	// Author's name
+	$name = get_the_author();
+	$title = get_the_author_meta( 'title' );
+	if( !empty( $title ) )
+		$name .= ', ' . $title;
+ 
+	// Author's Biographical info
+	$description   = wpautop( get_the_author_meta( 'description' ) );
+ 
+	// Build Author box output
+	$output = '';
+	$output .= '<section class="author-box" itemtype="http://schema.org/Person" itemscope="itemscope" itemprop="author">';
+	$output .= $gravatar;
+	$output .= '<div class="author-box-title"><span class="sub-author-box-title">Written by</span> <span itemprop="name">' . $name .'</span></div>';
+	$output .= '<div itemprop="description" class="author-box-content">' . $description . '</div>';
+	$output .= '</section>';
+	return $output;
+ 
+}
+
 remove_action( 'genesis_after_entry', 'genesis_do_author_box_single', 8 );
+add_action( 'genesis_before_entry_content', 'genesis_do_author_box_single', 8 );
 
 //* Customize the credits
 add_filter( 'genesis_footer_creds_text', 'sp_footer_creds_text' );
