@@ -805,6 +805,18 @@ a.read-more {
 	}
 }
 
+@media (max-width: 426px) {
+	.author-box {
+		max-width: 100%;
+		min-width: 100%;
+		width: 100%;
+		float: none;
+		margin: 0 0 20px 0;
+		border-right: 2px solid #000;
+		padding-right: 30px;
+	}
+}
+
 .author-box-title {
 	line-height: 1.2;
 	font-size: 16px;
