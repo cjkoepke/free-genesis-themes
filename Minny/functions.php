@@ -5,6 +5,14 @@ include_once( get_template_directory() . '/lib/init.php' );
 //* Add HTML5 Support
 add_theme_support( 'html5' );
 
+/** Add support for custom header **/
+add_theme_support( 'custom-header', array(
+	'default-text-color'     => 'ffffff',
+	'header-selector'        => '.header-image .site-header .wrap .site-title a',
+	'height'                 => 74,
+	'width'                  => 500,
+) );
+
 //* Force full-width-content layout setting
 add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
 

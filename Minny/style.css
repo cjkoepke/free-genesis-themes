@@ -258,6 +258,17 @@ h6 {
 	font-weight: 400;
 }
 
+.header-image .site-header .site-title {
+	text-indent: -9999px;
+}
+
+.header-image .site-header .site-title a {
+	display: block;
+	margin: 0 auto;
+	height: 74px;
+	width: 500px;
+}
+
 .entry-meta {
 	font-style: italic;
 	text-align: center;
