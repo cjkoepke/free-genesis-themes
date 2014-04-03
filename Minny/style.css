@@ -89,7 +89,7 @@ body {
 	font-family: "Droid Serif", Baskerville, Georgia, serif;
 	font-size: 16px;
 	font-size: 1.6rem;
-	font-weight: 400;
+	font-weight: 300;
 	line-height: 1.725;
 }
 
@@ -183,7 +183,8 @@ h5,
 h6 {
 	color: #333;
 	font-family: Baskerville, Georgia, serif;
-	font-weight: 400;
+	font-weight: bold;
+	text-transform: uppercase;
 	line-height: 1.2;
 	margin: 0 0 16px;
 	margin: 0 0 1.6rem;
@@ -220,12 +221,15 @@ h6 {
 }
 
 .entry-title {
+	font-weight: bold;
 	text-align: center;
-	font-style: italic;
+	text-transform: uppercase;
 }
 
 .entry-title a {
-	font-style: italic;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
 	text-decoration: none;
 	color: #000;
 }
@@ -244,6 +248,8 @@ h6 {
 	font-size: 13px;
 	font-size: 1.3rem;
 	color: #bbb;
+	text-transform: none;
+	font-weight: normal;
 }
 
 .site-title a {
@@ -251,11 +257,10 @@ h6 {
 	text-decoration: none;
 	text-transform: uppercase;
 	font-family: Baskerville, Georgia, serif;
-	font-style: italic;
 	font-size: 36px;
 	font-size: 3.6rem;
 	line-height: 1.2;
-	font-weight: 400;
+	font-weight: bold;
 }
 
 .header-image .site-header .site-title {
@@ -318,7 +323,6 @@ textarea {
 	background-color: #fff;
 	border: 1px solid #bbb;
 	color: #333;
-	font-style: italic;
 	font-size: 14px;
 	font-size: 1.4rem;
 	padding: 16px;
@@ -992,7 +996,7 @@ ul.children {
 	display: none;
 }
 
-.bypostauthor {
+.bypostauthor > article {
 	border-left: 2px solid #000;
 	padding-left: 30px !important;
 	padding-left: 3rem !important;
@@ -1146,7 +1150,7 @@ a.sd-button > span:hover {
 	border: none;
 	color: #eee;
 	font-size: 12px;
-	font-weight: 400;
+	font-weight: 300;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 }
@@ -1287,33 +1291,23 @@ Footer
 	margin-bottom: 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Featured Post Grid
+------------------------------------------------------------ */
+ 
+.genesis-grid-even {
+  float: right;
+	padding: 0 0 15px;
+	width: 48%;
+}
+ 
+.genesis-grid-odd {
+	clear: both;
+	float: left;
+	padding: 0 0 15px ;
+	width: 48%;
+}
+ 
+.genesis-grid-even,
+.genesis-grid-odd {
+	margin: 0 0 20px;
+}
