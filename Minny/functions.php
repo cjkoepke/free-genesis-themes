@@ -5,14 +5,6 @@ include_once( get_template_directory() . '/lib/init.php' );
 //* Add HTML5 Support
 add_theme_support( 'html5' );
 
-/** Add support for custom header **/
-add_theme_support( 'custom-header', array(
-	'default-text-color'     => 'ffffff',
-	'header-selector'        => '.header-image .site-header .wrap .site-title a',
-	'height'                 => 74,
-	'width'                  => 500,
-) );
-
 //* Force full-width-content layout setting
 add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
 
@@ -104,6 +96,9 @@ add_filter('excerpt_more', 'new_excerpt_more');
 function minny_styles() {
 	// Enqueue Google Fonts (Better performance when executing as a stylesheet, instead of @import)
 	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic' );
+
+	// Add Custom Scripts
+	// wp_enqueue_script( 'minnyScripts', get_stylesheet_directory_uri() . '/js/minnyScripts.js', array('jquery'));
 }
 add_action( 'wp_enqueue_scripts', 'minny_styles', 99);
 
@@ -168,38 +163,7 @@ add_theme_support( 'genesis-structural-wraps', array(
 ) );
 
 // //* Remove the author box on single posts HTML5 Themes
-add_filter( 'get_the_author_genesis_author_box_single', '__return_true' );
-
-add_filter( 'genesis_author_box', 'minny_author_box' );
-function minny_author_box() {
- 
-	// Author's Gravatar image
-	$gravatar_size = apply_filters( 'genesis_author_box_gravatar_size', 100 );
-	$gravatar      = get_avatar( get_the_author_meta( 'email' ), $gravatar_size );
- 
-	// Author's name
-	$name = get_the_author();
-	$title = get_the_author_meta( 'title' );
-	if( !empty( $title ) )
-		$name .= ', ' . $title;
- 
-	// Author's Biographical info
-	$description   = wpautop( get_the_author_meta( 'description' ) );
- 
-	// Build Author box output
-	$output = '';
-	$output .= '<section class="author-box" itemtype="http://schema.org/Person" itemscope="itemscope" itemprop="author">';
-	$output .= $gravatar;
-	$output .= '<div class="author-box-title"><span class="sub-author-box-title">Written by</span> <span itemprop="name">' . $name .'</span></div>';
-	$output .= '<div itemprop="description" class="author-box-content">' . $description . '</div>';
-	$output .= '</section>';
-	return $output;
- 
-}
-
 remove_action( 'genesis_after_entry', 'genesis_do_author_box_single', 8 );
-add_action( 'genesis_entry_content', 'genesis_do_author_box_single', 8 );
-
 
 //* Customize the credits
 add_filter( 'genesis_footer_creds_text', 'sp_footer_creds_text' );

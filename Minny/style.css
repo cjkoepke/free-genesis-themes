@@ -1,8 +1,9 @@
 /*
-	Theme Name: Minny Pro
+	Theme Name: Minny
 	Description: Minimal blogging.
-	Author: Calvin Koepke
-	Author URI: http://www.clvnk.com
+	Author: CLVNK, Co.
+	Theme URL: http://demo.clvnk.co/minny/
+	Author URI: http://www.clvnk.co
 	Version: 2.0
 	Template: genesis
 */
@@ -89,7 +90,7 @@ body {
 	font-family: "Droid Serif", Baskerville, Georgia, serif;
 	font-size: 16px;
 	font-size: 1.6rem;
-	font-weight: 300;
+	font-weight: 400;
 	line-height: 1.725;
 }
 
@@ -183,8 +184,7 @@ h5,
 h6 {
 	color: #333;
 	font-family: Baskerville, Georgia, serif;
-	font-weight: bold;
-	text-transform: uppercase;
+	font-weight: 400;
 	line-height: 1.2;
 	margin: 0 0 16px;
 	margin: 0 0 1.6rem;
@@ -221,15 +221,12 @@ h6 {
 }
 
 .entry-title {
-	font-weight: bold;
 	text-align: center;
-	text-transform: uppercase;
+	font-style: italic;
 }
 
 .entry-title a {
-	font-weight: bold;
-	text-align: center;
-	text-transform: uppercase;
+	font-style: italic;
 	text-decoration: none;
 	color: #000;
 }
@@ -248,8 +245,6 @@ h6 {
 	font-size: 13px;
 	font-size: 1.3rem;
 	color: #bbb;
-	text-transform: none;
-	font-weight: normal;
 }
 
 .site-title a {
@@ -257,21 +252,11 @@ h6 {
 	text-decoration: none;
 	text-transform: uppercase;
 	font-family: Baskerville, Georgia, serif;
+	font-style: italic;
 	font-size: 36px;
 	font-size: 3.6rem;
 	line-height: 1.2;
-	font-weight: bold;
-}
-
-.header-image .site-header .site-title {
-	text-indent: -9999px;
-}
-
-.header-image .site-header .site-title a {
-	display: block;
-	margin: 0 auto;
-	height: 74px;
-	width: 500px;
+	font-weight: 400;
 }
 
 .entry-meta {
@@ -323,6 +308,7 @@ textarea {
 	background-color: #fff;
 	border: 1px solid #bbb;
 	color: #333;
+	font-style: italic;
 	font-size: 14px;
 	font-size: 1.4rem;
 	padding: 16px;
@@ -635,12 +621,6 @@ Content
 	text-align: justify;
 }
 
-@media (max-width: 800px) {
-	.entry-content {
-		text-align: left;
-	}
-}
-
 .entry, 
 .comment-respond {
 	width: 100%;
@@ -801,81 +781,6 @@ a.read-more {
 	border-bottom: 1px solid #ccc;
 }
 
-/* Author Box
---------------------------------------------- */
-
-.author-box {
-	float: right;
-	width: 240px;
-	margin: 0 0 20px 30px;
-	padding-left: 30px;
-	border-left: 2px solid #000;
-}
-
-@media (max-width: 800px) {
-	.author-box {
-		width: 40%;
-		max-width: 240px;
-		min-width: 100px;
-	}
-}
-
-@media (max-width: 426px) {
-	.author-box {
-		max-width: 100%;
-		min-width: 100%;
-		width: 100%;
-		float: none;
-		margin: 0 0 20px 0;
-		border-right: 2px solid #000;
-		padding-right: 30px;
-	}
-}
-
-.author-box-title {
-	line-height: 1.2;
-	font-size: 16px;
-	text-transform: uppercase;
-	font-family: Baskerville, Georgia, serif;
-	padding-bottom: 10px;
-	margin-bottom: 10px;
-	border-bottom: 1px solid #eee;
-	max-width: 90px;
-}
-
-.author-box-title span.sub-author-box-title {
-	display: block;
-	font-size: 12px;
-	text-transform: none;
-	font-style: italic;
-}
-
-.author-box .avatar {
-	float: right;
-	margin-left: 10px;
-	width: 100px;
-	border-radius: 50%;
-}
-
-.author-box-content {
-	font-size: 13px;
-}
-
-.author-box-content p {
-	margin-bottom: 0;
-}
-
-.author-box-content a {
-	color: #976843;
-	text-decoration: none;
-}
-
-.format-image .author-box,
-.format-link .author-box,
-.format-quote .author-box {
-	display: none;
-}
-
 /* Comments
 --------------------------------------------- */
 
@@ -996,7 +901,7 @@ ul.children {
 	display: none;
 }
 
-.bypostauthor > article {
+.bypostauthor {
 	border-left: 2px solid #000;
 	padding-left: 30px !important;
 	padding-left: 3rem !important;
@@ -1097,11 +1002,6 @@ Jetpack Sharing
 	padding: 20px 0;
 	padding: 2rem 0;
 }
-
-div.sharedaddy .sd-content {
-	width: 100% !important;
-}
-
 .entry-content h3.sd-title { 
 	font-family: Baskerville, Georgia, serif;
 	font-size: 1.1em;
@@ -1122,61 +1022,34 @@ div.sharedaddy .sd-content {
 }
  
 .content div.sharedaddy a.sd-button {
-	background: #111;
+	padding: 0 10px;
+	padding: 0 1rem;
 	box-shadow: none;
 }
  
-.content .sd-social-icon-text a.sd-button > span, 
-a.sd-button > span {
-	background: #111;
-	color: #eee;
+.content .sd-social-icon-text a.sd-button > span, a.sd-button > span {
 	opacity: 1;
-	padding: 2px 12px;
-	-webkit-transition: all 0.1s ease-in-out;
-	-moz-transition:    all 0.1s ease-in-out;
-	-ms-transition:     all 0.1s ease-in-out;
-	-o-transition:      all 0.1s ease-in-out;
-	transition:         all 0.1s ease-in-out;
-}
-
-.content .sd-social-icon-text a.sd-button > span:hover, 
-a.sd-button > span:hover {
-	background: #976843;
+	padding: 6px 12px;
 }
  
 .content a.sd-button > span {
 	background-image: none !important;
-	background: #111;
+	background: #fff;
 	border: none;
-	color: #eee;
+	color: #000;
 	font-size: 12px;
-	font-weight: 300;
+	font-weight: 400;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 }
  
 .content a.sd-button:hover > span {
-	color: #eee;
+	color: #976843;
 }
  
 .sd-content .sd-button span.share-count {
-	background: #111;
-	color: #fff !important;
+	color: #976843 !important;
 	font-size: 100% !important;
-	-webkit-transition: all 0.1s ease-in-out;
-	-moz-transition:    all 0.1s ease-in-out;
-	-ms-transition:     all 0.1s ease-in-out;
-	-o-transition:      all 0.1s ease-in-out;
-	transition:         all 0.1s ease-in-out;
-}
-
-.sd-content .sd-button:hover span.share-count {
-	background: #976843;
-	margin-left: 5px;
-}
-
-div.sharedaddy a.sd-button:hover {
-	background: #976843 !important;
 }
 
 /*
@@ -1291,23 +1164,33 @@ Footer
 	margin-bottom: 0;
 }
 
-/* Featured Post Grid
------------------------------------------------------------- */
- 
-.genesis-grid-even {
-  float: right;
-	padding: 0 0 15px;
-	width: 48%;
-}
- 
-.genesis-grid-odd {
-	clear: both;
-	float: left;
-	padding: 0 0 15px ;
-	width: 48%;
-}
- 
-.genesis-grid-even,
-.genesis-grid-odd {
-	margin: 0 0 20px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
