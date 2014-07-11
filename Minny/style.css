@@ -5,7 +5,12 @@
 	Theme URL: http://demo.clvnk.co/minny/
 	Author URI: http://www.clvnk.co
 	Version: 2.0
+
 	Template: genesis
+	Template Version: 2.0.1;
+
+	License: GPL-2.0+
+	License URI: http://www.opensource.org/licenses/gpl-license.php
 */
 
 /* Table of Contents
@@ -621,7 +626,7 @@ Content
 	text-align: justify;
 }
 
-.entry, 
+.entry,
 .comment-respond {
 	width: 100%;
 	max-width: 800px;
@@ -633,7 +638,7 @@ Content
 }
 
 @media (max-width: 800px) {
-	.entry, 
+	.entry,
 	.comment-respond {
 		padding: 0 20px;
 		padding: 0 2rem;
@@ -815,7 +820,7 @@ a.read-more {
 
 .comment-respond a,
 .entry-comments a {
-	
+
 }
 
 .comment-reply-title,
@@ -998,11 +1003,11 @@ Plugins
 Jetpack Sharing
 ---------------------------------------------------------------------------------------------------- */
 
-.sharedaddy { 
+.sharedaddy {
 	padding: 20px 0;
 	padding: 2rem 0;
 }
-.entry-content h3.sd-title { 
+.entry-content h3.sd-title {
 	font-family: Baskerville, Georgia, serif;
 	font-size: 1.1em;
 	line-height: 1.5;
@@ -1010,7 +1015,7 @@ Jetpack Sharing
 }
 .sd-content ul li { display: inline-block; list-style: none; }
 
- 
+
 .content div.sharedaddy div.sd-block {
 	border: none;
 	padding: 0;
@@ -1020,18 +1025,18 @@ Jetpack Sharing
 	margin: 0;
 	text-align: left;
 }
- 
+
 .content div.sharedaddy a.sd-button {
 	padding: 0 10px;
 	padding: 0 1rem;
 	box-shadow: none;
 }
- 
+
 .content .sd-social-icon-text a.sd-button > span, a.sd-button > span {
 	opacity: 1;
 	padding: 6px 12px;
 }
- 
+
 .content a.sd-button > span {
 	background-image: none !important;
 	background: #fff;
@@ -1042,11 +1047,11 @@ Jetpack Sharing
 	letter-spacing: 1px;
 	text-transform: uppercase;
 }
- 
+
 .content a.sd-button:hover > span {
 	color: #976843;
 }
- 
+
 .sd-content .sd-button span.share-count {
 	color: #976843 !important;
 	font-size: 100% !important;
@@ -1163,34 +1168,4 @@ Footer
 .site-footer p {
 	margin-bottom: 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
