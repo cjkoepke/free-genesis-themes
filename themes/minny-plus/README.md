@@ -1,7 +1,8 @@
 # Minny
-=================
-
 Easily install using the theme ZIP file or via FTP.
+
+## Theme Support
+You can [submit an issue](https://github.com/cjkoepke/free-genesis-themes/issues/new) if you have a problem setting up the theme.
 
 ## Genesis Settings
 Default settings for the demo come as is, except for the featured image, which is set. The post display is also set to "excerpt".
