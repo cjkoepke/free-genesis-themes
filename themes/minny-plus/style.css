@@ -2,8 +2,8 @@
 	Theme Name: Minny Plus
 	Description: A minimal theme with a focus on typography, showcasing beautiful imagery, and simplicity.
 	Author: Calvin Koepke
-	Theme URL: http://www.calvinkoepke.com/resources/
-	Author URI: http://www.calvinkoepke.com
+	Theme URL: https://github.com/cjkoepke/free-genesis-themes
+	Author URI: https://calvinkoepke.com
 	Version: 2.0
 	License: GPL-2.0+
 	License URI: http://www.opensource.org/licenses/gpl-license.php
@@ -1247,21 +1247,21 @@ Media Queries
 	min-height: 50px;
 	max-height: 50px;
   }
-  
+
 }
 
 @media (max-width: 800px) {
 
-	.entry, 
+	.entry,
 	.comment-respond {
 		max-width: 100%;
 		margin-right: 0;
 		margin-left: 0;
 	}
 
-	.content-sidebar .content, 
+	.content-sidebar .content,
 	.sidebar-content .content,
-	.content-sidebar .sidebar, 
+	.content-sidebar .sidebar,
 	.sidebar-content .sidebar {
 		width: 100%;
 		float: none;
@@ -1394,4 +1394,3 @@ Media Queries
 		width: 100%;
 	}
 }
-

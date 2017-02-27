@@ -13,8 +13,8 @@
 
 	define( 'CHILD_THEME_NAME', 'Minny Plus' );
 	define( 'CHILD_THEME_AUTHOR', 'Calvin Koepke' );
-	define( 'CHILD_THEME_AUTHOR_URL', 'http://www.calvinkoepke.com/' );
-	define( 'CHILD_THEME_URL', 'http://www.calvinkoepke.com/resources' );
+	define( 'CHILD_THEME_AUTHOR_URL', 'https://github.com/cjkoepke/free-genesis-themes' );
+	define( 'CHILD_THEME_URL', 'https://calvinkoepke.com/resources' );
 	define( 'CHILD_THEME_VERSION', '2.0' );
 	define( 'TEXT_DOMAIN', 'ck' );
 
@@ -92,7 +92,7 @@
 	//* Customize the credits
 	add_filter( 'genesis_footer_creds_text', 'ck_footer_creds_text' );
 	function ck_footer_creds_text() {
-		
+
 		//* Return our custom credits
 		return '<p>Copyright &copy; ' . date('Y') . ' &middot; <a href="' . CHILD_THEME_URL . '" target="_blank">' . CHILD_THEME_NAME . '</a> &middot; Made for you by <a href="' . CHILD_THEME_AUTHOR_URL . '" target="_blank">' . CHILD_THEME_AUTHOR . '</a> &middot; Built on the <a target="_blank" href="http://www.genesistheme.com">Genesis Framework</a></p>';
 
@@ -104,13 +104,13 @@
 
 		//* Custom jQuery for our theme
 		wp_enqueue_script( 'ck-main-scripts', get_stylesheet_directory_uri() . '/js/main.js', array( 'jquery' ), CHILD_THEME_VERSION );
-		
+
 		//* Custom theme fonts from Google
 		wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Droid+Sans:400,700,400italic|Crimson+Text:700italic' );
-		
+
 		//* Default WordPress icon library
 		wp_enqueue_style( 'dashicons' );
-	
+
 	}
 
 	//* Customize the entry meta in the entry header
@@ -118,7 +118,7 @@
 	function ck_post_info_filter( $post_info ) {
 
 		$post_info = '[post_date] in [post_categories before=""] with [post_comments zero="0 Comments" one="1 Comment" more="% Comments"] [post_edit]';
-		
+
 		return $post_info;
 
 	}
@@ -148,7 +148,7 @@
 	//* Body Classes
 	add_filter( 'body_class', 'ck_body_class' );
 	function ck_body_class( $classes ) {
-	
+
 		$classes[] = 'minny-plus';
 
 		if ( is_home() || is_page_template( 'page_blog.php' )) {
@@ -156,7 +156,7 @@
 		}
 
 		return $classes;
-		
+
 	}
 
 	//* Menu Button

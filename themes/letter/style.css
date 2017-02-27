@@ -1,9 +1,9 @@
 /*
 Theme Name: Letter
-Theme URI: http://www.calvinkoepke.com/free-themes/
+Theme URI: https://github.com/cjkoepke/free-genesis-themes
 Description: A single-column theme designed to eliminate the clutter, and bring attention to the art of writing.
 Author: Calvin Koepke
-Author URI: http://www.calvinkoepke.com/
+Author URI: https://calvinkoepke.com/
 Template: genesis
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -1350,7 +1350,7 @@ p.entry-meta,
 }
 
 li.comment {
-	
+
 }
 
 .comment-content {
@@ -1670,4 +1670,3 @@ li.comment {
 	}
 
 }
-

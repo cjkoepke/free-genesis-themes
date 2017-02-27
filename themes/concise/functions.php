@@ -13,15 +13,15 @@
 
 	define( 'CHILD_THEME_NAME', 'Concise' );
 	define( 'CHILD_THEME_AUTHOR', 'Calvin Koepke' );
-	define( 'CHILD_THEME_AUTHOR_URL', 'http://www.calvinkoepke.com/' );
-	define( 'CHILD_THEME_URL', 'http://www.calvinkoepke.com/resources/' );
+	define( 'CHILD_THEME_AUTHOR_URL', 'https://github.com/cjkoepke/free-genesis-themes' );
+	define( 'CHILD_THEME_URL', 'https://calvinkoepke.com/' );
 	define( 'CHILD_THEME_VERSION', '2.0.1' );
 	define( 'TEXT_DOMAIN', 'ck' );
 
 
 //* Include required files from other directories inside our child theme
 //* =============================================================== */
-	
+
 	//* Theme Defaults (setup the defaults on theme install or theme switch automatically)
 	include_once( get_stylesheet_directory() . '/lib/theme-defaults.php' );
 
@@ -82,14 +82,14 @@
 
 	add_action( 'wp_enqueue_scripts', 'ck_theme_scripts' );
 	function ck_theme_scripts() {
-		
+
 		//* Load fonts from Google
 		wp_enqueue_style('google-fonts', '//fonts.googleapis.com/css?family=Open+Sans:700,400|Merriweather:400,400italic,700)', array(), CHILD_THEME_VERSION );
-		
+
 		//* Load our custom JavaScript
 		wp_enqueue_script('menu', get_stylesheet_directory_uri() . '/assets/js/menu.js', array( 'jquery' ), CHILD_THEME_VERSION );
 		wp_enqueue_script('general', get_stylesheet_directory_uri() . '/assets/js/general.js', array( 'jquery' ), CHILD_THEME_VERSION );
-		
+
 		//* Load WordPress icon font for our menu
 		wp_enqueue_style( 'dashicons' );
 
@@ -102,43 +102,43 @@
 		$avatar = get_avatar( get_option( 'admin_email' ), 100 );
 
 		return $avatar . $inside;
-	
+
 	}
 
 	//* Modify the post info in the entry header
 	add_filter( 'genesis_post_info', 'ck_post_info_filter' );
 	function ck_post_info_filter( $post_info ) {
-		
+
 		$post_info = '[post_date before="Posted on " format="F d, Y"] [post_comments before=""] [post_edit]';
-			
+
 		return $post_info;
-	
+
 	}
 
 	//* Modify the post meta in the entry footer
 	add_filter( 'genesis_post_meta', 'ck_post_meta_filter' );
 	function ck_post_meta_filter( $post_meta ) {
-		
+
 		$post_meta = '[post_categories sep="" before=""]';
-			
+
 		return $post_meta;
-	
+
 	}
 
 	//* Modify size of gravatars in comments section
 	add_filter( 'genesis_comment_list_args', 'ck_comments_gravatar' );
 	function ck_comments_gravatar( $args ) {
-	
+
 		$args['avatar_size'] = 60;
-	
+
 		return $args;
-	
+
 	}
 
 	//* Add custom classes to our body tag
 	add_filter( 'body_class', 'ck_body_class' );
 	function ck_body_class( $classes ) {
-	
+
 		$classes[] = 'calvinmakes';
 
 		//* If we're on the home page (blog feed) or the Genesis Blog Template
@@ -146,23 +146,23 @@
 			$classes[] = 'blog';
 
 		return $classes;
-		
+
 	}
 
 	//* Add a menu toggle button to the header for mobile screen sizes
 	add_action( 'genesis_before', 'ck_responsive_menu', 14 );
 	function ck_responsive_menu() {
-	
+
 		$button = '<a href="" id="menu-toggle"><span class="dashicons dashicons-menu"></span></a>';
-	
+
 		echo $button;
-	
+
 	}
 
 	//* Add featured image to a single post
 	add_action( 'genesis_before_entry_content', 'ck_display_featured_img' );
 	function ck_display_featured_img() {
-	
+
 		//* If the current post has a thumbnail and the current view is a single post
 		if ( has_post_thumbnail() && is_singular( 'post' ) )
 			echo '<div class="featured-img">',
@@ -183,9 +183,9 @@
 	add_filter('excerpt_more', 'ck_get_read_more_link');
 	add_filter( 'the_content_more_link', 'ck_get_read_more_link' );
 	function ck_get_read_more_link() {
-	
+
 		return '... <a href="' . get_permalink() . '">Read More</a>';
-	
+
 	}
 
 //* Register Our Widget Areas
@@ -232,7 +232,7 @@
 		'name'        => __( 'Home Feature Full', TEXT_DOMAIN ),
 		'description' => __( 'This is a full width feature section.', TEXT_DOMAIN )
 	));
-	
+
 
 //* Display Widget Areas
 //* =============================================================== */
@@ -240,10 +240,10 @@
 	//* Footer Widget
 	add_action( 'genesis_before_footer', 'ck_footer_widget' );
 	function ck_footer_widget() {
-		
+
 		genesis_widget_area( 'footer', array(
 			'before'	=>	'<div class="footer-widgets"><div class="wrap">',
 			'after'		=>	'</div></div>'
 		));
-	
+
 	}
